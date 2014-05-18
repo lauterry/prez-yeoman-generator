@@ -1,4 +1,23 @@
 prez-yeoman-generator
 =====================
 
-A prez on Yeoman generators
+#Plan
+
+* présentation de Yeoman
+* exemple de générateurs
+* créez le votre
+    * installation
+        * structure du répertoire créé
+    * poser des questions et recueillir les réponses (Inquirer.js)
+    * actions
+        * créer des répertoires
+        * copier des fichiers (attention aux fichiers commançant par .)
+        * template
+        * finalisation
+    * sous générateurs
+    * testez vos générateurs
+    * partagez votre générateur
+    * bonus
+        * couleur
+        * lancer wiredep
+        * 

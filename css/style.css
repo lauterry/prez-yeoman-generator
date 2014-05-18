@@ -1,0 +1,32 @@
+pre code {
+    background: inherit;
+}
+
+code {
+    font-family: 'Source Code Pro';
+}
+
+.center {
+    text-align: center;
+}
+
+.fa-sfeir:before {
+    content : '\2630';
+}
+
+#bio {
+    color: white;
+    background: black;
+}
+
+#bio li {
+    margin-bottom: 50px;
+}
+
+#bio .sfeir {
+    color: #ff6519;
+}
+
+#bio .fa {
+    margin-right: 50px;
+}
