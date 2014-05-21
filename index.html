@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Yeoman generators</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
 	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="bower_components/highlightjs/styles/tomorrow.css" />
@@ -120,46 +121,65 @@
 </section>
 
 <section>
-	<h1>Actions</h1>
+	<h1><i class="fa fa-film"></i> Actions</h1>
 </section>
 
 <section>
-	<p>Une action = une méthode définie dans le prototype du générateur</p>
+	<p>Une action est automatiquement appelée par le générateur ...</p>
+</section>
+
+<section>
+	<p>... si elle est définie dans le constructeur de celui-ci</p>
 </section>
 
 <section>
 	<pre><code class="javascript">
 yeoman.generators.base.extend({
-	step1 : function () {},
-	step2 : function () {},
-	step3 : function () {}
+
+	step1 : function () {
+		// action 1
+	},
+
+	step2 : function () {
+		// action 2
+	},
+
+	step3 : function () {
+		// action 3
+	}
+
 });
 	</code></pre>
 </section>
 
-<section>
+<section class="center">
 	<p>Chaque action est appelée dans l'ordre de déclaration</p>
 </section>
 
 <section>
-	<p>Définir une méthode qui ne sera pas appelée</p>
+	<p>Définir une méthode qui ne sera pas appelée ?</p>
 </section>
 
 <section>
 	<pre><code class="javascript">
 yeoman.generators.base.extend({
+
 	step1 : function () {},
+
 	step2 : function () {},
+
 	step3 : function () {
 		this._stepNotCalled();
 	},
+
 	_stepNotCalled : function () {}
+
 });
 	</code></pre>
 </section>
 
 <section>
-	<h1>Intéragir avec l'utilisateur</h1>
+	<h1><i class="fa fa-user"></i> Intéragir avec l'utilisateur</h1>
 </section>
 
 <section class="animate">
@@ -169,11 +189,42 @@ yeoman.generators.base.extend({
 	</div>
 </section>
 
+
+<section>
+	<div>
+		<pre><code class="javascript">
+			{ type : "list" }
+		</code></pre>
+		<img src="img/inquirer-list.png" alt="inquirer list"/>
+	</div>
+</section>
+
+<section>
+	<div>
+	<pre><code class="javascript">
+		{ type : "confirm" }
+	</code></pre>
+		<img src="img/inquirer-confirm.png" alt="inquirer confirm"/>
+	</div>
+</section>
+
+<section>
+	<div>
+		<pre><code class="javascript">
+			{ type : "checkbox" }
+		</code></pre>
+		<img src="img/inquirer-checkbox.png" alt="inquirer checkbox"/>
+	</div>
+</section>
+
 <section>
 	<pre><code class="javascript smaller">
 yeoman.generators.Base.extend({
+
 	prompt: function () {
+
 		var done = this.async();
+
 		this.prompt([{
 			type    : "input",
 			name    : "name",
@@ -183,37 +234,13 @@ yeoman.generators.Base.extend({
 			console.log(answers.name);
 			done();
 		});
+
 	}
+
 })
 	</code></pre>
 </section>
 
-<section>
-	<div>
-		<pre><code class="javascript">
-{ type : "list" }
-			</code></pre>
-		<img src="img/inquirer-list.png" alt="inquirer list"/>
-	</div>
-</section>
-
-<section>
-	<div>
-	<pre><code class="javascript">
-{ type : "confirm" }
-	</code></pre>
-		<img src="img/inquirer-confirm.png" alt="inquirer confirm"/>
-	</div>
-</section>
-
-<section>
-	<div>
-		<pre><code class="javascript">
-{ type : "checkbox" }
-		</code></pre>
-		<img src="img/inquirer-checkbox.png" alt="inquirer checkbox"/>
-	</div>
-</section>
 
 <script src="bower_components/jquery/jquery.min.js"></script>
 <script src="bower_components/keymaster/keymaster.js"></script>
