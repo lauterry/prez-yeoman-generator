@@ -30,3 +30,7 @@ code {
 #bio .fa {
     margin-right: 50px;
 }
+
+.smaller {
+    font-size : 45%;
+}

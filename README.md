@@ -13,6 +13,7 @@ prez-yeoman-generator
         * créer des répertoires
         * copier des fichiers (attention aux fichiers commançant par .)
         * template
+        * Gruntfile Editor API
         * finalisation
     * sous générateurs
     * testez vos générateurs
@@ -20,4 +21,4 @@ prez-yeoman-generator
     * bonus
         * couleur
         * lancer wiredep
-        * 
+        * Greeting Yeoman
