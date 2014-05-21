@@ -6,6 +6,15 @@ code {
     font-family: 'Source Code Pro';
 }
 
+.vbscript {
+	color: #25239c;
+	opacity: 1 !important;
+}
+
+.vbscript .keyword {
+	color: #9c3f15;
+}
+
 .center {
     text-align: center;
 }

@@ -97,7 +97,7 @@
 
 <section class="animate">
 	<div>
-		<h1>DEMO</h1>
+		<h1><i class="fa fa-play"></i> DEMO</h1>
 		<h2 class="slide-to-right">ngTailor</h2>
 	</div>
 </section>
@@ -238,6 +238,53 @@ yeoman.generators.Base.extend({
 	}
 
 })
+	</code></pre>
+</section>
+
+<section>
+	<h1><i class="fa fa-play"></i> DEMO</h1>
+</section>
+
+
+<section>
+	<h1><i class="fa fa-file-text-o"></i> Intéragir avec les fichiers</h1>
+</section>
+
+<section>
+	<div>
+		<h1><i class="fa fa-upload"></i> Source</h1>
+		<p><pre><code class="bash"> par défault <i class="fa fa-folder"></i>../templates</code></pre></p>
+		<pre><code class="javascript">this.src.readJSON('package.json')</code></pre>
+	</div>
+</section>
+
+<section>
+	<div>
+		<h1><i class="fa fa-upload"></i> Destination</h1>
+		<pre><code class="javascript">this.dest.copy('bower.json', 'bower.json')</code></pre>
+	</div>
+</section>
+
+<section>
+	<div>
+		<h1><i class="fa fa-upload"></i> Templating</h1>
+		<pre><code class="javascript">this.template('index.html', 'index.html')</code></pre>
+	</div>
+</section>
+
+<section>
+	<pre><code class="html">
+&lt;head&gt;
+	&lt;title&gt;&lt;%= app %&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;% if (greeting) {%&gt;
+&lt;p&gt;Hello &lt;%= _.humanize(name) %&gt;&lt;/p&gt;
+&lt;% } %&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
 	</code></pre>
 </section>
 
