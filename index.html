@@ -379,15 +379,53 @@ grunt.registerTask('build', ['compass', 'uglify']);
 </section>
 
 <section>
-	<p></p>
-</section>
-
-<section>
 	<h1><i class="fa fa-warning"></i> Attention</h1>
 	<ul class="steps">
 		<li><p>A partir de yeoman-generator 0.17 seulement</p></li>
 		<li><p>... qui sortira très prochainement <i class="fa fa-smile-o"></i></p></li>
 	</ul>
+</section>
+
+<section>
+	<h1><i class="fa fa-play"></i> DEMO</h1>
+</section>
+
+<section>
+	<h1><i class="fa fa-flag"></i> Final</h1>
+</section>
+
+<section>
+	<p>Effectuer des tâches quand toutes les actions ont été réalisées</p>
+</section>
+
+<section>
+	<pre><code class="javascript">
+
+yeoman.generators.Base.extend({
+   init: function () {
+      this.on('end', function () {
+          // tâches finales
+      });
+   }
+});
+
+	</code></pre>
+</section>
+
+<section>
+	<h1>Exemples</h1>
+	<ul class="steps">
+		<li><p>Afficher un message de succès avec <a href="https://github.com/sindresorhus/chalk">chalk</a></p></li>
+		<li><p>Importer vos JS et CSS dans index.html avec <a href="https://github.com/stephenplusplus/wiredep">wiredep</a></p></li>
+	</ul>
+</section>
+
+<section>
+	<h1><i class="fa fa-play"></i> DEMO</h1>
+</section>
+
+<section>
+	<h1><i class="fa fa-check-circle-o"></i> Tester vos générateurs</h1>
 </section>
 
 
