@@ -19,6 +19,10 @@ code {
     text-align: center;
 }
 
+.offset {
+    margin-left: 150px;
+}
+
 .fa-sfeir:before {
     content : '\2630';
 }

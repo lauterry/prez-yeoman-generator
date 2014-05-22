@@ -19,6 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "ruban": "~0.3.0"
+    "ruban": "~0.3.0",
+    "font-awesome": "~4.1.0"
   }
 }

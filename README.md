@@ -11,7 +11,7 @@ prez-yeoman-generator
     * poser des questions et recueillir les réponses (Inquirer.js)
     * actions
         * créer des répertoires
-        * copier des fichiers (attention aux fichiers commançant par .)
+        * copier des fichiers (attention aux fichiers commençant par .)
         * template
         * Gruntfile Editor API
         * finalisation
@@ -35,9 +35,18 @@ prez-yeoman-generator
     * générer une section et le fichier javascript (sub-generator)
 
 * Utiliser generator-generator pour générer le générateur ruban **(YO GENERATOR-GENERATOR)**
+* Essayer votre générateur **(NPM LINK)** 
 * Récupérer les réponses de l'utilisateur. **(PROMPT)**
-* A partir des réponses, générer le fichier index.html **(THIS.TEMPLATE)**
+* A partir des réponses, générer le fichier index.html 
     * Générer les options
     * Créer une page de garde avec le titre de la prez, le nom de l'auteur de son twitter
-* Créer un fichier bower.json et le copier dans le répertoire de destination **(THIS.COPY)**
-*
+* Créer un fichier bower.json et le copier dans le répertoire de destination **(THIS.TEMPLATE)**
+* Créer un répertoire CSS et y placer un fichier CSS pour centrer la première slide **(THIS.SRC.COPY THIS.DEST.MKDIR)**
+* Copier un fichier editorconfig et insister sur le nom du fichier qui ne doit pas commencer par un . **(THIS.SRC.COPY)**
+* Télécharger les dépendances Bower **(THIS.BOWERINSTALL)**
+* Créer un fichier Gruntfile et créer les taches browserSync + jshint + watch **(GRUNTFILEAPI)**
+* Créer le package.json et le copier
+* Télécharger les dépendances npm **(THIS.INSTALLDEPENDENCIES)**
+* Finalisation **(ON.('END'))**
+    * Appeler wiredep **(ON.('WIREDEP'))**
+    * Afficher un message **(THIS.LOG(CHALK('HELLO'))**

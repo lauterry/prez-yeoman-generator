@@ -18,7 +18,7 @@
 	<div>
 		<h1>Créer votre propre générateur Yeoman</h1>
 		<p><small>Thierry LAU</small></p>
-		<small><i class="fa fa-twitter"></i><a href="http://twitter/com/laut3rry"> laut3rry</a></small>
+		<small><i class="fa fa-twitter"></i><a href="http://www.twitter.com/laut3rry"> laut3rry</a></small>
 	</div>
 </section>
 
@@ -125,14 +125,6 @@
 </section>
 
 <section>
-	<p>Une action est automatiquement appelée par le générateur ...</p>
-</section>
-
-<section>
-	<p>... si elle est définie dans le constructeur de celui-ci</p>
-</section>
-
-<section>
 	<pre><code class="javascript">
 yeoman.generators.base.extend({
 
@@ -152,16 +144,17 @@ yeoman.generators.base.extend({
 	</code></pre>
 </section>
 
-<section class="center">
-	<p>Chaque action est appelée dans l'ordre de déclaration</p>
+<section>
+	<h1><i class="fa fa-lightbulb-o"></i> A retenir</h1>
+	<ul class="steps">
+		<li><p>Une action est automatiquement appelée par le générateur si elle est définie dans le constructeur de celui-ci</p></li>
+		<li><p>Chaque action est appelée dans l'ordre de déclaration</p></li>
+	</ul>
 </section>
 
 <section>
-	<p>Définir une méthode qui ne sera pas appelée ?</p>
-</section>
-
-<section>
-	<pre><code class="javascript">
+	<p>Et si je veux pas que le générateur appelle ma fonction ?</p>
+	<pre><code class="javascript smaller">
 yeoman.generators.base.extend({
 
 	step1 : function () {},
@@ -190,28 +183,28 @@ yeoman.generators.base.extend({
 </section>
 
 
-<section>
+<section class="center">
 	<div>
 		<pre><code class="javascript">
-			{ type : "list" }
+{ type : "list" }
 		</code></pre>
 		<img src="img/inquirer-list.png" alt="inquirer list"/>
 	</div>
 </section>
 
-<section>
+<section class="center">
 	<div>
 	<pre><code class="javascript">
-		{ type : "confirm" }
+{ type : "confirm" }
 	</code></pre>
 		<img src="img/inquirer-confirm.png" alt="inquirer confirm"/>
 	</div>
 </section>
 
-<section>
+<section class="center">
 	<div>
 		<pre><code class="javascript">
-			{ type : "checkbox" }
+{ type : "checkbox" }
 		</code></pre>
 		<img src="img/inquirer-checkbox.png" alt="inquirer checkbox"/>
 	</div>
@@ -245,7 +238,6 @@ yeoman.generators.Base.extend({
 	<h1><i class="fa fa-play"></i> DEMO</h1>
 </section>
 
-
 <section>
 	<h1><i class="fa fa-file-text-o"></i> Intéragir avec les fichiers</h1>
 </section>
@@ -253,7 +245,7 @@ yeoman.generators.Base.extend({
 <section>
 	<div>
 		<h1><i class="fa fa-upload"></i> Source</h1>
-		<p><pre><code class="bash"> par défault <i class="fa fa-folder"></i>../templates</code></pre></p>
+		<p><pre><code class="bash">par défault <i class="fa fa-folder"></i> ../templates</code></pre></p>
 		<pre><code class="javascript">this.src.readJSON('package.json')</code></pre>
 	</div>
 </section>
@@ -266,10 +258,12 @@ yeoman.generators.Base.extend({
 </section>
 
 <section>
-	<div>
-		<h1><i class="fa fa-upload"></i> Templating</h1>
-		<pre><code class="javascript">this.template('index.html', 'index.html')</code></pre>
-	</div>
+	<h1><i class="fa fa-upload"></i> Templating</h1>
+	<ul class="steps">
+		<li><a href="devdocs.io/lodash/index#template">Lodash</a></li>
+		<li><a href="http://epeli.github.io/underscore.string/">Underscore.string</a></li>
+		<li><pre><code class="javascript">this.template('index.html', 'index.html')</code></pre></li>
+	</ul>
 </section>
 
 <section>
@@ -287,6 +281,115 @@ yeoman.generators.Base.extend({
 &lt;/html&gt;
 	</code></pre>
 </section>
+
+<section>
+	<pre><code class="html">
+&lt;head&gt;
+	&lt;title&gt;My App&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;Hello Dev2day&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+	</code></pre>
+</section>
+
+<section>
+	<h1><i class="fa fa-play"></i> DEMO</h1>
+</section>
+
+<section>
+	<h1><i class="fa fa-link"></i> Gérer les dépendances</h1>
+</section>
+
+<section class="center">
+	<div>
+		<h1>npm</h1>
+		<pre><code class="javascript">
+generator.npmInstall()
+		</code></pre>
+	</div>
+</section>
+
+<section class="center">
+	<div>
+		<h1>bower</h1>
+		<pre><code class="javascript">
+generator.bowerInstall()
+		</code></pre>
+	</div>
+</section>
+
+<section class="center">
+	<div>
+		<h1>npm + bower</h1>
+		<pre><code class="javascript">
+generator.installDependencies()
+		</code></pre>
+	</div>
+</section>
+
+<section>
+	<h1><i class="fa fa-lightbulb-o"></i> A retenir</h1>
+	<ul class="steps">
+		<li><p>peuvent être appelées n'importe où dans votre code</p></li>
+		<li><p><code class="bash">npm install</code> et <code class="bash">bower install</code> seront exécutés à la fin des actions</p></li>
+	</ul>
+</section>
+
+<section>
+	<h1><i class="fa fa-play"></i> DEMO</h1>
+</section>
+
+
+<section>
+	<h1><i class="fa fa-file-code-o"></i> Grunt Editor API</h1>
+</section>
+
+<section>
+	<h1></h1>
+	<ul class="steps">
+		<li>
+			<pre><code class="javascript smaller">
+this.gruntfile.insertConfig("clean", "{build: ['dist']}");
+			</code></pre>
+		</li>
+		<li>
+			<pre><code class="javascript smaller">
+grunt.initConfig({
+    clean: {
+	   build : ['dist']
+    }
+});
+			</code></pre>
+		</li>
+		<li>
+			<pre><code class="javascript smaller">
+this.gruntfile.registerTask('build', ['compass', 'uglify']);
+			</code></pre>
+		</li>
+		<li>
+			<pre><code class="javascript smaller">
+grunt.registerTask('build', ['compass', 'uglify']);
+			</code></pre>
+		</li>
+	</ul>
+</section>
+
+<section>
+	<p></p>
+</section>
+
+<section>
+	<h1><i class="fa fa-warning"></i> Attention</h1>
+	<ul class="steps">
+		<li><p>A partir de yeoman-generator 0.17 seulement</p></li>
+		<li><p>... qui sortira très prochainement <i class="fa fa-smile-o"></i></p></li>
+	</ul>
+</section>
+
 
 
 <script src="bower_components/jquery/jquery.min.js"></script>
