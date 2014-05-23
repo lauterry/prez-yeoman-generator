@@ -428,6 +428,111 @@ yeoman.generators.Base.extend({
 	<h1><i class="fa fa-check-circle-o"></i> Tester vos générateurs</h1>
 </section>
 
+<section>
+	<h1>Tester quoi ?</h1>
+	<ul class="steps">
+		<li>présence ou absence de fichier</li>
+		<li>contenu du fichier</li>
+	</ul>
+</section>
+
+<section>
+	<h1>Comment ?</h1>
+	<ul class="steps">
+		<li>Créer un répertoire de test</li>
+		<li>Créer le générateur</li>
+		<li>Mocker</li>
+		<li>Appeler le générateur</li>
+		<li>Vérifier les assertions</li>
+	</ul>
+</section>
+
+<section>
+	<h1>Test Helpers</h1>
+	<ul class="steps">
+		<li>
+			<pre><code class="javascript">
+var helpers = require('yeoman-generator').test;
+			</code></pre>
+		</li>
+	</ul>
+</section>
+
+<section>
+	<pre><code class="javascript">
+before(function (done) {
+
+  helpers.run('../generators/app')
+    .inDir('./tmp')
+    .withOptions({ foo: 'bar' })
+    .withArguments(['name-x'])
+    .withPrompt({ coffee: false })
+    .onEnd(done)
+
+})
+	</code></pre>
+</section>
+
+<section class="animate">
+	<h1><i class="fa fa-lightbulb-o"></i> Conseil</h1>
+	<ul>
+		<li class="slide-to-right"><p>Préférez les chemins absolus pour éviter les comportements imprévisibles</p></li>
+		<li>
+			<pre><code class="javascript smaller">
+var path = require('path');
+
+before(function (done) {
+
+  helpers.run(path.join( __dirname, '../app'))
+    .inDir(path.join( __dirname, './tmp'))
+	.withPrompt({ coffee: false })
+    ...
+
+})
+			</code></pre>
+		</li>
+	</ul>
+</section>
+
+<section>
+	<h1>Assert Helpers</h1>
+	<ul class="steps">
+		<li>
+			<pre><code class="javascript">
+var assert = require('yeoman-generator').assert;
+			</code></pre>
+		</li>
+	</ul>
+</section>
+
+<section>
+	<h1></h1>
+	<ul class="steps">
+		<li>
+			<pre><code class="javascript">
+assert.file(path);
+			</code></pre></li>
+		<li>
+		<pre><code class="javascript">
+assert.noFile(path);
+			</code></pre></li>
+		</li>
+		<li>
+			<pre><code class="javascript">
+assert.fileContent(path, regex);
+			</code></pre></li>
+		</li>
+		<li>
+			<pre><code class="javascript">
+assert.noFileContent(path, regex);
+			</code></pre></li>
+		</li>
+	</ul>
+</section>
+
+<section>
+	<h1><i class="fa fa-play"></i> DEMO</h1>
+</section>
 
 
 <script src="bower_components/jquery/jquery.min.js"></script>

@@ -17,6 +17,15 @@ prez-yeoman-generator
         * finalisation
     * sous générateurs
     * testez vos générateurs
+        * quoi ?
+            * Présence ou absence d'un fichier
+            * Présence ou absence du contenu d'un fichier
+        * comment ?
+            * Créer un répertoire de test
+            * Créer le générateur
+            * Mocker les entrées
+            * Appeler le générateur
+            * Vérifier les assertions
     * partagez votre générateur
     * bonus
         * couleur
@@ -50,3 +59,5 @@ prez-yeoman-generator
 * Finalisation **(ON.('END'))**
     * Appeler wiredep **(ON.('WIREDEP'))**
     * Afficher un message **(THIS.LOG(CHALK('HELLO'))**
+* Tester les générateurs
+    * 
