@@ -534,6 +534,74 @@ assert.noFileContent(path, regex);
 	<h1><i class="fa fa-play"></i> DEMO</h1>
 </section>
 
+<section>
+	<h1><i class="fa fa-gear"></i> Sub-generators</h1>
+</section>
+
+<section>
+	<pre><code class="javascript">
+yo generator:subgenerator "name"
+	</code></pre>
+</section>
+
+<section>
+	<h1>Exemples</h1>
+	<ul class="steps">
+		<li>
+			<pre><code class="javascript">yo angular:filter "monFiltre"</code></pre></li>
+		<li>
+			<pre><code class="javascript">yo backbone:model "monModel"</code></pre>
+		</li>
+		</li>
+		<li>
+			<pre><code class="javascript">yo ember:controller "monController"</code></pre></li>
+		</li>
+		<li>
+			<pre><code class="javascript"><b>yo ruban:slide "titreDuSlide"</b></code></pre></li>
+		</li>
+	</ul>
+</section>
+
+<section>
+	<h1></h1>
+	<ul class="steps">
+		<li>
+			<p>Fonctionne comme un générateur Yeoman</p>
+		</li>
+		<li>
+			<pre><code class="javascript">
+yeoman.generators.nameBase.extend({
+
+})
+			</code></pre>
+		</li>
+	</ul>
+</section>
+
+<section>
+	<h1></h1>
+	<ul class="steps">
+		<li>
+			<pre><code class="javascript">yo ruban:slide "titreDuSlide"</code></pre></li>
+			<pre><code class="javascript">
+yeoman.generators.nameBase.extend({
+  step : function() {
+      console.log(this.name); // titreDuSlide
+  }
+})
+			</code></pre>
+		</li>
+		<li>
+			<pre><code class="javascript">
+
+			</code></pre>
+		</li>
+	</ul>
+</section>
+
+<section>
+	<h1><i class="fa fa-play"></i> DEMO</h1>
+</section>
 
 <script src="bower_components/jquery/jquery.min.js"></script>
 <script src="bower_components/keymaster/keymaster.js"></script>
