@@ -87,11 +87,12 @@
 </section>
 
 <section>
+	<h1></h1>
 	<ul class="steps">
-		<li>Trop de choses ?</li>
-		<li>Pas assez de choses ?</li>
-		<li>Ne répond pas à mes besoins ?</li>
-		<li><b>Créer votre propre générateur</b></li>
+		<li><p>Trop de choses ?</p></li>
+		<li><p>Pas assez de choses ?</p></li>
+		<li><p>Ne répond pas à mes besoins ?</p></li>
+		<li><p><b>Créer votre propre générateur</p></b></li>
 	</ul>
 </section>
 
@@ -107,17 +108,15 @@
 </section>
 
 <section>
-	<div>
-		<h1>Il nous faut un générateur de générateur</h1>
-		<ul class="steps">
-			<li>
-				<pre><code class="bash">npm install -g generator-generator</code></pre>
-			</li>
-			<li>
-				<pre><code class="bash">yo generator</code></pre>
-			</li>
-		</ul>
-	</div>
+	<h1>Il nous faut un générateur de générateur</h1>
+	<ul class="steps">
+		<li>
+			<pre><code class="bash">npm install -g generator-generator</code></pre>
+		</li>
+		<li>
+			<pre><code class="bash">yo generator</code></pre>
+		</li>
+	</ul>
 </section>
 
 <section>
@@ -473,10 +472,10 @@ before(function (done) {
 	</code></pre>
 </section>
 
-<section class="animate">
+<section>
 	<h1><i class="fa fa-lightbulb-o"></i> Conseil</h1>
-	<ul>
-		<li class="slide-to-right"><p>Préférez les chemins absolus pour éviter les comportements imprévisibles</p></li>
+	<ul class="steps">
+		<li><p>Préférez les chemins absolus pour éviter les comportements imprévisibles</p></li>
 		<li>
 			<pre><code class="javascript smaller">
 var path = require('path');
@@ -485,8 +484,7 @@ before(function (done) {
 
   helpers.run(path.join( __dirname, '../app'))
     .inDir(path.join( __dirname, './tmp'))
-	.withPrompt({ coffee: false })
-    ...
+	...
 
 })
 			</code></pre>
