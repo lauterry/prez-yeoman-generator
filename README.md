@@ -60,4 +60,4 @@ prez-yeoman-generator
     * Appeler wiredep **(ON.('WIREDEP'))**
     * Afficher un message **(THIS.LOG(CHALK('HELLO'))**
 * Tester les générateurs
-    * 
+* Sous générateurs
