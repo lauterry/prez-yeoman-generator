@@ -601,6 +601,52 @@ yeoman.generators.nameBase.extend({
 	<h1><i class="fa fa-play"></i> DEMO</h1>
 </section>
 
+<section>
+	<h1><i class="fa fa-database"></i> Yeoman Storage API</h1>
+</section>
+
+<section>
+	<p>Sauvegarder des données</p>
+	<p>Partager des données entre générateur et sous-générateurs</p>
+</section>
+
+<section>
+	<p>.yo-rc.json</p>
+	<p>
+		<pre><code class="json">
+{
+   "generator-backbone": {
+      "requirejs": true,
+      "coffee": true
+   },
+   "generator-gruntfile": {
+      "compass": false
+   }
+}
+		</code></pre>
+	</p>
+</section>
+
+<section>
+	<h1></h1>
+	<ul class="steps">
+		<li>
+			<pre><code class="javascript">generator.config.set(key, value)</code></pre>
+		</li>
+		<li>
+			<pre><code class="javascript">generator.config.get(key)</code></pre>
+		</li>
+		</li>
+		<li>
+			<pre><code class="javascript">generator.config.delete(key)</code></pre></li>
+		</li>
+	</ul>
+</section>
+
+<section>
+	<h1><i class="fa fa-play"></i> DEMO</h1>
+</section>
+
 <script src="bower_components/jquery/jquery.min.js"></script>
 <script src="bower_components/keymaster/keymaster.js"></script>
 <script src="bower_components/hammerjs/hammer.min.js"></script>
