@@ -31,6 +31,10 @@ code {
     content : '\2630';
 }
 
+.picture {
+    height: 500px;
+}
+
 #bio {
     color: white;
     background: black;
@@ -46,6 +50,18 @@ code {
 
 #bio .fa {
     margin-right: 50px;
+}
+
+#what-is-yeoman .fa-question {
+    position: relative;
+    font-size: 30px;
+    float: right;
+    right: 150px;
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    transform: rotate(20deg);
 }
 
 .smaller {

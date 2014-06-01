@@ -9,6 +9,14 @@ $( document ).ready(function() {
 		"bindMouseWheel": false
 	});
 
+	$('#what-is-yeoman').on({
+		active : function () {
+			$(this).find('.fa-question').stop().animate({
+				"font-size" : '200px'
+			}, 1000);
+		}
+	})
+
 	$('.animate').on({
 		active : function () {
 			$(this).find('.slide-to-right').stop().animate({
