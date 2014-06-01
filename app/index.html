@@ -126,7 +126,7 @@
 </section>
 
 <section>
-	<p>Et si on codait un générateur Ruban ?</p>
+	<h2>Et si on codait un générateur Ruban ?</h2>
 </section>
 
 <section>
@@ -168,7 +168,7 @@ yeoman.generators.base.extend({
 <section>
 	<h1><i class="fa fa-lightbulb-o"></i> A retenir</h1>
 	<ul class="steps">
-		<li><p>Une action est automatiquement appelée par le générateur si elle est définie dans le constructeur de celui-ci</p></li>
+		<li><p>Une action est automatiquement appelée par le générateur si elle est définie dans le prototype de celui-ci</p></li>
 		<li><p>Chaque action est appelée dans l'ordre de déclaration</p></li>
 	</ul>
 </section>
@@ -273,22 +273,24 @@ yeoman.generators.Base.extend({
 
 <section>
 	<div>
-		<h1><i class="fa fa-upload"></i> Destination</h1>
+		<h1><i class="fa fa-download"></i> Destination</h1>
 		<pre><code class="javascript">this.dest.copy('bower.json', 'bower.json')</code></pre>
 	</div>
 </section>
 
 <section>
-	<h1><i class="fa fa-upload"></i> Templating</h1>
+	<h1><i class="fa fa-file-code-o"></i> Templating</h1>
 	<ul class="steps">
 		<li><a href="devdocs.io/lodash/index#template">Lodash</a></li>
 		<li><a href="http://epeli.github.io/underscore.string/">Underscore.string</a></li>
-		<li><pre><code class="javascript">this.template('index.html', 'index.html')</code></pre></li>
+		<li><pre><code class="javascript">this.template('_index.html', 'index.html')</code></pre></li>
 	</ul>
 </section>
 
 <section>
-	<pre><code class="html">
+	<div>
+		<p>_index.html</p>
+		<pre><code class="html">
 &lt;head&gt;
 	&lt;title&gt;&lt;%= app %&gt;&lt;/title&gt;
 &lt;/head&gt;
@@ -300,11 +302,14 @@ yeoman.generators.Base.extend({
 
 &lt;/body&gt;
 &lt;/html&gt;
-	</code></pre>
+		</code></pre>
+	</div>
 </section>
 
 <section>
-	<pre><code class="html">
+	<div>
+		<p>index.html</p>
+		<pre><code class="html">
 &lt;head&gt;
 	&lt;title&gt;My App&lt;/title&gt;
 &lt;/head&gt;
@@ -314,7 +319,8 @@ yeoman.generators.Base.extend({
 
 &lt;/body&gt;
 &lt;/html&gt;
-	</code></pre>
+		</code></pre>
+	</div>
 </section>
 
 <section>
