@@ -1,4 +1,5 @@
 .idea/
 .DS_Store
-bower_components/font-awesome/src
-bower_components/font-awesome/.npmignore
+node_modules/
+app/vendor/font-awesome/src
+app/vendor/font-awesome/.npmignore
