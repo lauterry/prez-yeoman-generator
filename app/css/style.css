@@ -64,6 +64,22 @@ code {
     transform: rotate(20deg);
 }
 
+#test-helpers code {
+    font-size: 60%;
+}
+
+#assert-helpers code {
+    font-size: 60%;
+}
+
+#assert-api code {
+    font-size: 60%;
+}
+
+#yeoman-storage-api code {
+    font-size: 100%;
+}
+
 .smaller {
     font-size : 45%;
 }

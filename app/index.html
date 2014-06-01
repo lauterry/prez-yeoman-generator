@@ -335,7 +335,7 @@ yeoman.generators.Base.extend({
 	<div>
 		<h1>npm</h1>
 		<pre><code class="javascript">
-generator.npmInstall()
+this.npmInstall()
 		</code></pre>
 	</div>
 </section>
@@ -344,7 +344,7 @@ generator.npmInstall()
 	<div>
 		<h1>bower</h1>
 		<pre><code class="javascript">
-generator.bowerInstall()
+this.bowerInstall()
 		</code></pre>
 	</div>
 </section>
@@ -353,7 +353,7 @@ generator.bowerInstall()
 	<div>
 		<h1>npm + bower</h1>
 		<pre><code class="javascript">
-generator.installDependencies()
+this.installDependencies()
 		</code></pre>
 	</div>
 </section>
@@ -370,6 +370,11 @@ generator.installDependencies()
 	<h1><i class="fa fa-play"></i> DEMO</h1>
 </section>
 
+<section class="center">
+	<div>
+		<img class="picture "src="img/yeoman_0.17.jpg" alt=""/>
+	</div>
+</section>
 
 <section>
 	<h1><i class="fa fa-file-code-o"></i> Grunt Editor API</h1>
@@ -474,7 +479,7 @@ yeoman.generators.Base.extend({
 	</ul>
 </section>
 
-<section>
+<section id="test-helpers">
 	<h1>Test Helpers</h1>
 	<ul class="steps">
 		<li>
@@ -520,7 +525,7 @@ before(function (done) {
 	</ul>
 </section>
 
-<section>
+<section id="assert-helpers">
 	<h1>Assert Helpers</h1>
 	<ul class="steps">
 		<li>
@@ -531,7 +536,7 @@ var assert = require('yeoman-generator').assert;
 	</ul>
 </section>
 
-<section>
+<section id="assert-api">
 	<h1></h1>
 	<ul class="steps">
 		<li>
@@ -655,18 +660,18 @@ yeoman.generators.nameBase.extend({
 	</p>
 </section>
 
-<section>
+<section id="yeoman-storage-api">
 	<h1></h1>
 	<ul class="steps">
 		<li>
-			<pre><code class="javascript">generator.config.set(key, value)</code></pre>
+			<p><pre><code class="javascript">this.config.set(key, value)</code></pre></p>
 		</li>
 		<li>
-			<pre><code class="javascript">generator.config.get(key)</code></pre>
+			<p><pre><code class="javascript">this.config.get(key)</code></pre></p>
 		</li>
 		</li>
 		<li>
-			<pre><code class="javascript">generator.config.delete(key)</code></pre></li>
+			<p><pre><code class="javascript">this.config.delete(key)</code></pre></li></p>
 		</li>
 	</ul>
 </section>
