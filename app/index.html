@@ -709,6 +709,37 @@ yeoman.generators.nameBase.extend({
 </section>
 
 <section>
+	<h1><i class="fa fa-refresh"></i> Run loop</h1>
+</section>
+
+<section>
+	<p>Cycle de vie avec un système de priorité</p>
+</section>
+
+<section>
+	<h1>Run Loop</h1>
+	<p>
+	<pre><code class="javascript smaller">
+yeoman.generators.base.extend({
+	initializing : function () {},
+	prompting : function () {},
+	configuring : function () {},
+
+	default : function () {},
+
+	writing : function () {},
+	conflicts : function () {},
+	install : function () {},
+	end : function () {
+		aStep : function () {},
+		anotherStep : function () {}
+	}
+});
+	</code></pre>
+	</p>
+</section>
+
+<section>
 	<h1>Conclusion</h1>
 </section>
 
@@ -720,7 +751,6 @@ yeoman.generators.nameBase.extend({
 		<li><p><i class="fa fa-globe"></i> pour la communauté</p></li>
 	</ul>
 </section>
-
 
 <section class="center">
 	<div>
