@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>Creez un generateur Yeoman</title>
+	<title>Créez votre generateur Yeoman</title>
 	<!-- bower:css -->
 	<link rel="stylesheet" href="vendor/normalize-css/normalize.css" />
 	<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css" />
@@ -27,7 +27,7 @@
 
 <section class="center">
 	<div>
-		<h1>Créer votre propre générateur Yeoman</h1>
+		<h1>Créez votre propre générateur Yeoman</h1>
 		<p>Thierry LAU</p>
 		<p><i class="fa fa-twitter"></i><a href="http://www.twitter.com/laut3rry"> laut3rry</a></p>
 	</div>
@@ -123,7 +123,7 @@
 		<li><p>Trop de choses ?</p></li>
 		<li><p>Pas assez de choses ?</p></li>
 		<li><p>Ne répond pas à mes besoins ?</p></li>
-		<li><p><b>Créer votre propre générateur</b></p></li>
+		<li><p><b>Créez votre propre générateur</b></p></li>
 	</ul>
 </section>
 
@@ -202,7 +202,7 @@ yeoman.generators.base.extend({
 </section>
 
 <section>
-	<p>Et si je veux pas que le générateur appelle ma fonction ?</p>
+	<p>Et si je ne veux pas que le générateur appelle ma fonction ?</p>
 	<pre><code class="javascript smaller">
 yeoman.generators.base.extend({
 
@@ -309,9 +309,8 @@ yeoman.generators.Base.extend({
 <section>
 	<h1><i class="fa fa-file-code-o"></i> Templating</h1>
 	<ul class="steps">
-		<li><a href="devdocs.io/lodash/index#template">Lodash</a></li>
-		<li><a href="http://epeli.github.io/underscore.string/">Underscore.string</a></li>
-		<li><pre><code class="javascript big">this.template('_index.html', 'index.html')</code></pre></li>
+		<li><p><a href="devdocs.io/lodash/index#template">Lodash</a></p></li>
+		<li><p><a href="http://epeli.github.io/underscore.string/">Underscore.string</a></p></li>
 	</ul>
 </section>
 
@@ -332,6 +331,10 @@ yeoman.generators.Base.extend({
 &lt;/html&gt;
 		</code></pre>
 	</div>
+</section>
+
+<section>
+	<pre><code class="javascript big">this.template('_index.html', 'index.html')</code></pre>
 </section>
 
 <section>
