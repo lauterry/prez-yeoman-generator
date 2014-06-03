@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>Creez un generateur Yeoman</title>
+	<title>Créez votre generateur Yeoman</title>
 	<!-- bower:css -->
 	<link rel="stylesheet" href="app/vendor/normalize-css/normalize.css" />
 	<link rel="stylesheet" href="app/vendor/font-awesome/css/font-awesome.css" />
@@ -27,7 +27,7 @@
 
 <section class="center">
 	<div>
-		<h1>Créer votre propre générateur Yeoman</h1>
+		<h1>Créez votre propre générateur Yeoman</h1>
 		<p>Thierry LAU</p>
 		<p><i class="fa fa-twitter"></i><a href="http://www.twitter.com/laut3rry"> laut3rry</a></p>
 	</div>
@@ -39,7 +39,7 @@
 		<li><i class="fa fa-html5"></i> Développeur Front End</li>
 		<li class="sfeir"><i class="fa fa-sfeir"></i> <a href="http://www.sfeir.com/">SFEIR</a></li>
 		<li><i class="fa fa-google-plus"></i><a href="http://gplus.to/html5css3fr "> HTML5 * CSS3 [FR]</a></li>
-		<li><i class="fa fa-github"></i><a href=""> ngTailor</a></li>
+		<li><i class="fa fa-github"></i><a href="http://lauterry.github.io/generator-ngtailor/"> ngTailor</a></li>
 	</ul>
 </section>
 
@@ -60,17 +60,26 @@
 	</div>
 </section>
 
+<section>
+	<h1></h1>
+	<ul class="steps">
+		<li><p>Crée l'arborescence de votre projet</p></li>
+		<li><p>Prépare votre workflow Front End (fichier Grunt)</p></li>
+		<li><p>Récupère les dépendances bower + npm de votre projet</p></li>
+	</ul>
+</section>
+
 <section class="center">
 	<div>
 		<h1>Installer Yeoman</h1>
-		<pre><code class="bash">npm install -g yo</code></pre>
+		<pre><code class="bash bigger">npm install -g yo</code></pre>
 	</div>
 </section>
 
 <section class="center">
 	<div>
 		<h1>Installer un générateur</h1>
-		<pre><code class="bash">npm install -g generator-angular</code></pre>
+		<pre><code class="bash bigger">npm install -g generator-angular</code></pre>
 	</div>
 </section>
 
@@ -96,12 +105,12 @@
 <section class="center">
 	<div>
 		<h1>Générer votre projet</h1>
-		<pre><code class="bash">yo angular</code></pre>
+		<pre><code class="bash bigger">yo angular</code></pre>
 	</div>
 </section>
 
 <section class="no-toc">
-	<h1>Résultat</h1>
+	<h1>Résultat en gif animé</h1>
 </section>
 
 <section>
@@ -114,7 +123,16 @@
 		<li><p>Trop de choses ?</p></li>
 		<li><p>Pas assez de choses ?</p></li>
 		<li><p>Ne répond pas à mes besoins ?</p></li>
-		<li><p><b>Créer votre propre générateur</b></p></li>
+		<li><p><b>Créez votre propre générateur</b></p></li>
+	</ul>
+</section>
+
+<section>
+	<p>Créer un générateur Yeoman</p>
+	<ul class="steps">
+		<li><p><i class="fa fa-user"></i> pour vous</p></li>
+		<li><p><i class="fa fa-users"></i> pour votre équipe</p></li>
+		<li><p><i class="fa fa-globe"></i> pour la communauté</p></li>
 	</ul>
 </section>
 
@@ -130,15 +148,25 @@
 </section>
 
 <section>
-	<h1>Il nous faut un générateur de générateur</h1>
+	<h2>Il nous faut un générateur de générateur</h2>
 	<ul class="steps">
 		<li>
-			<pre><code class="bash">npm install -g generator-generator</code></pre>
+			<pre><code class="bash bigger">npm install -g generator-generator</code></pre>
 		</li>
 		<li>
-			<pre><code class="bash">yo generator</code></pre>
+			<pre><code class="bash bigger">yo generator</code></pre>
 		</li>
 	</ul>
+</section>
+
+<section class="no-toc">
+	<h1><i class="fa fa-play"></i> DEMO</h1>
+</section>
+
+<section class="animate">
+	<h1>Essayer votre générateur</h1>
+	<p>Créer un lien global vers votre générateur</p>
+	<p><pre  class="slide-to-right"><code class="bash bigger">sudo npm link</code></pre></p>
 </section>
 
 <section>
@@ -174,7 +202,7 @@ yeoman.generators.base.extend({
 </section>
 
 <section>
-	<p>Et si je veux pas que le générateur appelle ma fonction ?</p>
+	<p>Et si je ne veux pas que le générateur appelle ma fonction ?</p>
 	<pre><code class="javascript smaller">
 yeoman.generators.base.extend({
 
@@ -204,30 +232,30 @@ yeoman.generators.base.extend({
 </section>
 
 
-<section class="center">
+<section class="center" id="prompt-list">
 	<div>
-		<pre><code class="javascript">
+		<pre><code class="javascript bigger">
 { type : "list" }
 		</code></pre>
-		<img src="app/img/inquirer-list.png" alt="inquirer list"/>
+		<img class="picture" src="img/inquirer-list.png" alt="inquirer list"/>
 	</div>
 </section>
 
-<section class="center">
+<section class="center" id="prompt-confirm">
 	<div>
-	<pre><code class="javascript">
+	<pre><code class="javascript bigger">
 { type : "confirm" }
 	</code></pre>
-		<img src="app/img/inquirer-confirm.png" alt="inquirer confirm"/>
+		<img class="picture" src="img/inquirer-confirm.png" alt="inquirer confirm"/>
 	</div>
 </section>
 
-<section class="center">
+<section class="center" id="prompt-checkbox">
 	<div>
-		<pre><code class="javascript">
+		<pre><code class="javascript bigger">
 { type : "checkbox" }
 		</code></pre>
-		<img src="app/img/inquirer-checkbox.png" alt="inquirer checkbox"/>
+		<img class="picture" src="img/inquirer-checkbox.png" alt="inquirer checkbox"/>
 	</div>
 </section>
 
@@ -266,24 +294,23 @@ yeoman.generators.Base.extend({
 <section>
 	<div>
 		<h1><i class="fa fa-upload"></i> Source</h1>
-		<p><pre><code class="bash">par défault <i class="fa fa-folder"></i> ../templates</code></pre></p>
-		<pre><code class="javascript">this.src.readJSON('package.json')</code></pre>
+		<p><pre><code class="bash bigger">par défault <i class="fa fa-folder"></i> ../templates</code></pre></p>
+		<pre><code class="javascript bigger">this.src.readJSON('package.json')</code></pre>
 	</div>
 </section>
 
 <section>
 	<div>
 		<h1><i class="fa fa-download"></i> Destination</h1>
-		<pre><code class="javascript">this.dest.copy('bower.json', 'bower.json')</code></pre>
+		<pre><code class="javascript big">this.dest.copy('app.js', 'dist/app.js')</code></pre>
 	</div>
 </section>
 
 <section>
 	<h1><i class="fa fa-file-code-o"></i> Templating</h1>
 	<ul class="steps">
-		<li><a href="devdocs.io/lodash/index#template">Lodash</a></li>
-		<li><a href="http://epeli.github.io/underscore.string/">Underscore.string</a></li>
-		<li><pre><code class="javascript">this.template('_index.html', 'index.html')</code></pre></li>
+		<li><p><a href="devdocs.io/lodash/index#template">Lodash</a></p></li>
+		<li><p><a href="http://epeli.github.io/underscore.string/">Underscore.string</a></p></li>
 	</ul>
 </section>
 
@@ -304,6 +331,10 @@ yeoman.generators.Base.extend({
 &lt;/html&gt;
 		</code></pre>
 	</div>
+</section>
+
+<section>
+	<pre><code class="javascript big">this.template('_index.html', 'index.html')</code></pre>
 </section>
 
 <section>
@@ -334,7 +365,7 @@ yeoman.generators.Base.extend({
 <section class="center">
 	<div>
 		<h1>npm</h1>
-		<pre><code class="javascript">
+		<pre><code class="javascript bigger">
 this.npmInstall()
 		</code></pre>
 	</div>
@@ -343,7 +374,7 @@ this.npmInstall()
 <section class="center">
 	<div>
 		<h1>bower</h1>
-		<pre><code class="javascript">
+		<pre><code class="javascript bigger">
 this.bowerInstall()
 		</code></pre>
 	</div>
@@ -352,7 +383,7 @@ this.bowerInstall()
 <section class="center">
 	<div>
 		<h1>npm + bower</h1>
-		<pre><code class="javascript">
+		<pre><code class="javascript bigger">
 this.installDependencies()
 		</code></pre>
 	</div>
@@ -368,12 +399,6 @@ this.installDependencies()
 
 <section class="no-toc">
 	<h1><i class="fa fa-play"></i> DEMO</h1>
-</section>
-
-<section class="center">
-	<div>
-		<img class="picture "src="app/img/yeoman_0.17.jpg" alt=""/>
-	</div>
 </section>
 
 <section>
@@ -420,8 +445,13 @@ grunt.registerTask('build', ['compass', 'uglify']);
 	<h1><i class="fa fa-warning"></i> Attention</h1>
 	<ul class="steps">
 		<li><p>A partir de yeoman-generator 0.17 seulement</p></li>
-		<li><p>... qui sortira très prochainement <i class="fa fa-smile-o"></i></p></li>
 	</ul>
+</section>
+
+<section class="center">
+	<div>
+		<img class="picture "src="img/yeoman_0.17.jpg" alt=""/>
+	</div>
 </section>
 
 <section class="no-toc">
@@ -489,7 +519,7 @@ yeoman.generators.Base.extend({
 	<h1>Test Helpers</h1>
 	<ul class="steps">
 		<li>
-			<pre><code class="javascript">
+			<pre><code class="javascript big">
 var helpers = require('yeoman-generator').test;
 			</code></pre>
 		</li>
@@ -535,7 +565,7 @@ before(function (done) {
 	<h1>Assert Helpers</h1>
 	<ul class="steps">
 		<li>
-			<pre><code class="javascript">
+			<pre><code class="javascript big">
 var assert = require('yeoman-generator').assert;
 			</code></pre>
 		</li>
@@ -576,7 +606,7 @@ assert.noFileContent(path, regex);
 </section>
 
 <section>
-	<pre><code class="javascript">
+	<pre><code class="javascript bigger">
 yo generator:subgenerator "name"
 	</code></pre>
 </section>
@@ -585,16 +615,16 @@ yo generator:subgenerator "name"
 	<h1>Exemples</h1>
 	<ul class="steps">
 		<li>
-			<pre><code class="javascript">yo angular:filter "monFiltre"</code></pre></li>
+			<pre><code class="javascript bigger">yo angular:filter "monFiltre"</code></pre></li>
 		<li>
-			<pre><code class="javascript">yo backbone:model "monModel"</code></pre>
+			<pre><code class="javascript bigger">yo backbone:model "monModel"</code></pre>
 		</li>
 		</li>
 		<li>
-			<pre><code class="javascript">yo ember:controller "monController"</code></pre></li>
+			<pre><code class="javascript bigger">yo ember:controller "monController"</code></pre></li>
 		</li>
 		<li>
-			<pre><code class="javascript"><b>yo ruban:slide "titreDuSlide"</b></code></pre></li>
+			<pre><code class="javascript bigger"><b>yo ruban:slide "titreDuSlide"</b></code></pre></li>
 		</li>
 	</ul>
 </section>
@@ -606,7 +636,7 @@ yo generator:subgenerator "name"
 			<p>Fonctionne comme un générateur Yeoman</p>
 		</li>
 		<li>
-			<pre><code class="javascript">
+			<pre><code class="javascript bigger">
 yeoman.generators.nameBase.extend({
 
 })
@@ -619,18 +649,14 @@ yeoman.generators.nameBase.extend({
 	<h1></h1>
 	<ul class="steps">
 		<li>
-			<pre><code class="javascript">yo ruban:slide "titreDuSlide"</code></pre></li>
-			<pre><code class="javascript">
+			<pre><code class="javascript bigger">yo ruban:slide "titreDuSlide"</code></pre></li>
+			<pre><code class="javascript bigger">
 yeoman.generators.nameBase.extend({
   step : function() {
-      console.log(this.name); // titreDuSlide
+      console.log(this.name);
+      // titreDuSlide
   }
 })
-			</code></pre>
-		</li>
-		<li>
-			<pre><code class="javascript">
-
 			</code></pre>
 		</li>
 	</ul>
@@ -717,12 +743,6 @@ yeoman.generators.nameBase.extend({
 </section>
 
 <section>
-	<pre><code class="javascript smaller">
-
-	</code></pre>
-</section>
-
-<section>
 	<h1><i class="fa fa-refresh"></i> Run loop</h1>
 </section>
 
@@ -755,15 +775,6 @@ yeoman.generators.base.extend({
 
 <section>
 	<h1>Conclusion</h1>
-</section>
-
-<section>
-	<p>Créer un générateur Yeoman</p>
-	<ul class="steps">
-		<li><p><i class="fa fa-user"></i> pour vous</p></li>
-		<li><p><i class="fa fa-users"></i> pour votre équipe</p></li>
-		<li><p><i class="fa fa-globe"></i> pour la communauté</p></li>
-	</ul>
 </section>
 
 <section class="center">
