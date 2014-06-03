@@ -23,6 +23,15 @@ code {
     text-align: center;
 }
 
+
+code.big {
+	font-size: 60%;
+}
+
+code.bigger {
+	font-size: 80%;
+}
+
 .offset {
     margin-left: 150px;
 }
@@ -33,6 +42,18 @@ code {
 
 .picture {
     height: 600px;
+}
+
+#prompt-confirm .picture {
+	height: 50px;
+}
+
+#prompt-list .picture {
+	height: 300px;
+}
+
+#prompt-checkbox .picture {
+	height: 300px;
 }
 
 #bio {
