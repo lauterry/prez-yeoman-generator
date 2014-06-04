@@ -392,7 +392,7 @@ this.installDependencies()
 <section>
 	<h1><i class="fa fa-lightbulb-o"></i> A retenir</h1>
 	<ul class="steps">
-		<li><p>peuvent être appelées n'importe où dans votre code</p></li>
+		<li><p>this.installDependencies() peut être appelé n'importe où dans votre code</p></li>
 		<li><p><code class="bash">npm install</code> et <code class="bash">bower install</code> seront exécutés à la fin des actions</p></li>
 	</ul>
 </section>
@@ -402,7 +402,16 @@ this.installDependencies()
 </section>
 
 <section>
-	<h1><i class="fa fa-file-code-o"></i> Grunt Editor API</h1>
+	<h1><i class="fa fa-file-code-o"></i> Gruntfile Editor API</h1>
+</section>
+
+<section>
+	<h1>Gruntfile</h1>
+	<ul class="steps">
+		<li><p>important car définit votre workflow</p></li>
+		<li><p>un des fichiers les plus édités par les générateurs</p></li>
+		<li><p>peut être pollué par le code de templating</p></li>
+	</ul>
 </section>
 
 <section>
@@ -731,6 +740,14 @@ yeoman.generators.nameBase.extend({
 		<li>Yeoman Storage API</li>
 		<li>generator.composeWith()</li>
 		<li>Run Loop</li>
+	</ul>
+</section>
+
+<section>
+	<h1>Gruntfile Editor API</h1>
+	<ul class="steps">
+		<li><p>charge le Gruntfile du projet et l'enrichit</p></li>
+		<li><p>sinon crée un nouveau Gruntfile par défaut s'il n'existe pas</p></li>
 	</ul>
 </section>
 
