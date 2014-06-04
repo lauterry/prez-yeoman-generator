@@ -397,6 +397,39 @@ this.installDependencies()
 	</ul>
 </section>
 
+<section>
+	<h1><i class="fa fa-flag"></i> Finalisation</h1>
+</section>
+
+<section>
+	<p>Effectuer des tâches quand toutes les actions ont été réalisées</p>
+</section>
+
+<section>
+	<pre><code class="javascript">
+
+yeoman.generators.Base.extend({
+	init: function () {
+		this.on('end', function () {
+			// tâches finales
+		});
+	}
+});
+	</code></pre>
+</section>
+
+<section>
+	<h1>Exemples</h1>
+	<ul class="steps">
+		<li><p>Afficher un message en couleurs avec <a href="https://github.com/sindresorhus/chalk">chalk</a></p></li>
+		<li><p>Importer vos JS et CSS dans index.html avec <a href="https://github.com/stephenplusplus/wiredep">wiredep</a></p></li>
+	</ul>
+</section>
+
+<section class="no-toc">
+	<h1><i class="fa fa-play"></i> DEMO</h1>
+</section>
+
 <section class="no-toc">
 	<h1><i class="fa fa-play"></i> DEMO</h1>
 </section>
@@ -461,40 +494,6 @@ grunt.registerTask('build', ['compass', 'uglify']);
 	<div>
 		<img class="picture "src="img/yeoman_0.17.jpg" alt=""/>
 	</div>
-</section>
-
-<section class="no-toc">
-	<h1><i class="fa fa-play"></i> DEMO</h1>
-</section>
-
-<section>
-	<h1><i class="fa fa-flag"></i> Finalisation</h1>
-</section>
-
-<section>
-	<p>Effectuer des tâches quand toutes les actions ont été réalisées</p>
-</section>
-
-<section>
-	<pre><code class="javascript">
-
-yeoman.generators.Base.extend({
-   init: function () {
-      this.on('end', function () {
-          // tâches finales
-      });
-   }
-});
-
-	</code></pre>
-</section>
-
-<section>
-	<h1>Exemples</h1>
-	<ul class="steps">
-		<li><p>Afficher un message en couleurs avec <a href="https://github.com/sindresorhus/chalk">chalk</a></p></li>
-		<li><p>Importer vos JS et CSS dans index.html avec <a href="https://github.com/stephenplusplus/wiredep">wiredep</a></p></li>
-	</ul>
 </section>
 
 <section class="no-toc">
