@@ -73,6 +73,23 @@ code.bigger {
     margin-right: 50px;
 }
 
+#bio .arthur {
+    height: 10px;
+    float: right;
+    -webkit-transform: rotate(3deg);
+}
+
+
+#bio .logo {
+    margin-right: 50px;
+    height: 1em;
+}
+
+#bio a {
+    font-style: normal;
+}
+
+
 #what-is-yeoman .fa-question {
     position: relative;
     font-size: 30px;
