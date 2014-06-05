@@ -24,4 +24,15 @@ $( document ).ready(function() {
 			}, 1000);
 		}
 	})
+
+
+	$('.animate').on({
+		active : function () {
+			$(this).find('.arthur').stop().animate({
+				height : '500px',
+				'margin-right' : '-200px',
+				'margin-top' : '-100px'
+			}, 800);
+		}
+	})
 });
