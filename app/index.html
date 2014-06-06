@@ -169,7 +169,7 @@
 <section class="animate">
 	<h1>Essayer votre générateur</h1>
 	<p>Créer un lien global vers votre générateur</p>
-	<p><pre  class="slide-to-right"><code class="bash bigger">sudo npm link</code></pre></p>
+	<p><pre  class="slide-to-right"><code class="bash bigger">npm link</code></pre></p>
 </section>
 
 <section>
@@ -178,6 +178,8 @@
 
 <section>
 	<pre><code class="javascript">
+var yeoman = require('yeoman-generator');
+
 yeoman.generators.base.extend({
 
 	step1 : function () {
@@ -642,13 +644,6 @@ yo generator:subgenerator "name"
 		<li>
 			<p>Fonctionne comme un générateur Yeoman</p>
 		</li>
-		<li>
-			<pre><code class="javascript bigger">
-yeoman.generators.nameBase.extend({
-
-})
-			</code></pre>
-		</li>
 	</ul>
 </section>
 
@@ -679,7 +674,7 @@ yeoman.generators.nameBase.extend({
 
 <section>
 	<p>Sauvegarder des données</p>
-	<p>Partager des données entre générateur et sous-générateurs</p>
+	<p>Partager des données entre générateurs et sous-générateurs</p>
 </section>
 
 <section>
@@ -750,7 +745,7 @@ yeoman.generators.nameBase.extend({
 </section>
 
 <section>
-	<p>Invoker une action d'un autre générateur</p>
+	<p>Invoker un générateur ou un sous générateur</p>
 </section>
 
 <section>
